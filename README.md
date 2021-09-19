@@ -1,11 +1,12 @@
 # esp32-remote-control
-Send keystrokes to Windows using an ESP32
+Send keystrokes to Windows using an ESP32.
 
 This is an ESP32 project that connects to a [Remote Control
 Server](https://github.com/moefh/win-remote-control) running on
-Windows and sends pre-defined keystrokes when the buttons are pressed.
+Windows and sends pre-defined keystrokes when buttons are pressed.
 
 ![ESP32 Board with LEDs and buttons](doc/photo.jpg)
+
 
 ## Compilation
 
@@ -20,13 +21,13 @@ address (in your local network) of your Windows PC running
 `remote-control.exe`.
 
 After editing the configuration, just open the project's
-`esp32-remote-control.ino` in the Arduino IDE and send it to the
+`esp32-remote-control.ino` in the Arduino IDE and send it to your
 ESP32.
 
 
 ## Use
 
-Upon startup, the LEDs will blink while the ESP32 is connecting to
+On startup, all LEDs will blink while the ESP32 is connecting to
 your WiFi.  When the connection is successful, the green LED will
 quickly blink a few times and turn off to indicate that the system is
 ready and waiting for button presses.
