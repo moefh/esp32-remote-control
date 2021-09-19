@@ -1,0 +1,13 @@
+#include "config.h"
+
+// This configures how to connect to your WiFi:
+const char wifi_ssid[] = "YOUR WIFI SSID HERE";
+const char wifi_pass[] = "YOUR WIFI PASSWORD HERE";
+
+// This configures where to find remote-control.exe in your network:
+const char server_host[] = "YOUR WINDOWS PC LOCAL IP ADDRESS HERE";
+const int  server_port   = 5555;  // this is the port configured in remote-control.exe (the default is 5555)
+
+// These are the keys sent to remote-control.exe when the buttons are pressed:
+const char remote_control_command_start[] = "CTRL+R";
+const char remote_control_command_stop[]  = "CTRL+SPACE";
