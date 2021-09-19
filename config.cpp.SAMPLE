@@ -1,3 +1,9 @@
+/*
+ * THIS IS A SAMPLE
+ *
+ * You must copy this file to 'config.cpp' and edit the copy.
+ */
+
 #include "config.h"
 
 // This configures how to connect to your WiFi:
