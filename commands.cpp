@@ -2,7 +2,6 @@
 #include <WiFi.h>
 
 #include "commands.h"
-#include "control.h"
 #include "leds.h"
 #include "config.h"
 
@@ -27,27 +26,13 @@ void cmd_setup()
   }
 }
 
-void cmd_run(int command)
+int cmd_run(const char *command)
 {
   WiFiClient client;
   if (! client.connect(server_host, server_port)) {
-    ctrl_set_state(CTRL_STATE_ERROR);
-    return;
+    return CMD_RET_ERROR;
   }
 
-  switch (command) {
-  case CMD_START:
-    client.print(remote_control_command_start);
-    break;
-
-  case CMD_STOP:
-    client.print(remote_control_command_stop);
-    break;
-
-  default:
-    printf("unknown command: %d\n", command);
-    break;
-  }
-
-  ctrl_set_state(CTRL_STATE_IDLE);
+  client.print(remote_control_command_start);
+  return CMD_RET_SUCCESS;
 }

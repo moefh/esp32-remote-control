@@ -4,11 +4,11 @@
 #include <stdint.h>
 
 enum {
-  CMD_START,
-  CMD_STOP,
+  CMD_RET_SUCCESS,
+  CMD_RET_ERROR,
 };
 
 void cmd_setup();
-void cmd_run(int command);
+int cmd_run(const char *command);
 
 #endif /* COMMANDS_H_FILE */
